@@ -1,0 +1,19 @@
+{
+    // needed to make ghidra stubs work in this project (auto complete for vscode)
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.env\\Scripts\\python.exe",
+    "python.analysis.stubPath": "${workspaceFolder}\\.env\\Lib\\site-packages\\ghidra-stubs",
+    "python.autoComplete.extraPaths": [
+        
+        "${workspaceFolder}\\.env\\Lib\\site-packages\\ghidra-stubs"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}\\.env\\Lib\\site-packages\\ghidra-stubs"
+    ],
+    // env vars 
+    "GHIDRA_INSTALL_DIR": "<ghidra_base_repo>",
+    "PROJECT_PATH": "${workspaceFolder}${pathSeparator}.ghidra_project_files",
+    "PROJECT_NAME": "sample_project",
+    "HEADLESS": "support${pathSeparator}analyzeHeadless.bat",    
+    "BINARY":  "${workspaceFolder}\\.env\\Scripts\\python.exe" // analyze python for fun
+
+}
