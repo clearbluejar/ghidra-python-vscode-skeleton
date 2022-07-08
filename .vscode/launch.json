@@ -16,8 +16,9 @@
                 "GHIDRA_INSTALL_DIR": "${config:GHIDRA_INSTALL_DIR}",
                 "PROJECT_PATH": "${config:PROJECT_PATH}",
                 "PROJECT_NAME": "${config:PROJECT_NAME}",
-                "GHIDRA_HEADLESS":  "${config:GHIDRA_INSTALL_DIR}${config:HEADLESS}",
-                "BINARY": "${config:BINARY}"
+                "GHIDRA_HEADLESS":  "${config:GHIDRA_INSTALL_DIR}${pathSeparator}${config:HEADLESS}",
+                "BINARY": "${config:BINARY}",
+                "HEADLESS_SCRIPT": "${config:HEADLESS_SCRIPT}",
             }, 
         }
     ]

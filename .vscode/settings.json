@@ -10,10 +10,11 @@
         "${workspaceFolder}\\.env\\Lib\\site-packages\\ghidra-stubs"
     ],
     // env vars 
-    "GHIDRA_INSTALL_DIR": "<ghidra_base_repo>",
+    "GHIDRA_INSTALL_DIR": "<replace me with Ghidra install directory path>",
     "PROJECT_PATH": "${workspaceFolder}${pathSeparator}.ghidra_project_files",
     "PROJECT_NAME": "sample_project",
-    "HEADLESS": "support${pathSeparator}analyzeHeadless.bat",    
-    "BINARY":  "${workspaceFolder}\\.env\\Scripts\\python.exe" // analyze python for fun
+    "HEADLESS": "support${pathSeparator}analyzeHeadless.bat",
+    "BINARY":  "${workspaceFolder}\\.env\\Scripts\\python.exe", // analyze python for fun
+    "HEADLESS_SCRIPT":  "${workspaceFolder}\\sample.py" // analyze python for fun
 
 }

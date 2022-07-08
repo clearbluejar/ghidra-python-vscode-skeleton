@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run Ghidra Jython",
+            "label": "Run Current Python Script in Ghidra Jython",
             "type": "shell",
             "command": "${config:GHIDRA_INSTALL_DIR}${config:HEADLESS}",            
             "args": [
@@ -26,7 +26,7 @@
             "type": "shell",
             "command": "mkdir",            
             "args": [
-                "-Force",
+                "-Force",                
                 "-p",                
                 "${config:PROJECT_PATH}",
             ],
@@ -42,7 +42,7 @@
                 "${config:PROJECT_NAME}",
                 "-import",
                 "${config:BINARY}",
-                "${"
+                "-overwrite",
             ],
             "problemMatcher": [],
         },

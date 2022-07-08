@@ -33,7 +33,7 @@ program_name = prog.getName()
 creation_date = prog.getCreationDate()
 language_id = prog.getLanguageID()
 compiler_spec_id = prog.getCompilerSpec().getCompilerSpecID()
-print("%s: %s_%s (%s)\n".format(program_name, language_id, compiler_spec_id, creation_date))
+print("Program: {}: {}_{} ({})\n".format(program_name, language_id, compiler_spec_id, creation_date))
 
 # Get info about the current program's memory layout
 print("Memory layout:")
