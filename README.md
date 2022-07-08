@@ -14,6 +14,13 @@ Ghidra is a binary analysis tool (and much more). In order to do something usefu
 
 ## Setup
 
+### Clone Repo
+
+```bash
+git clone git@github.com:clearbluejar/ghidra-python-vscode-skeleton.git
+cd ghidra-python-vscode-skeleton
+```
+
 ### Setup venv
 ```bash
 python3 -m venv .env
@@ -178,6 +185,12 @@ Terminal will be reused by tasks, press any key to close it.
 
 ## Ways to run headless script
 
-1. The most straightforward means to run the script it to hit run via launch on [run_headless.py](run_headless.py).
-2. Another way is to run the script directly by using the `Run Current Python Script in Ghidra Jython` task within tasks.json.  To use this task make sure you have open the [sample.py](sample.py) 
+1. The most straightforward means to run the script it to hit run via launch on [run_headless.py](run_headless.py). It simply uses subprocess module with the correct arguments to run the sample script. 
+2. Another way is to run the script directly by using the `Run Current Python Script in Ghidra Jython` task within[tasks.json](.vscode/tasks.json).  To use this task make sure you have open and focused the [sample.py](sample.py).
+
+
+## Ghidra Headless Scripting Hangups 
+
+1. Ghidra runs Jython, not actually python. Limited to python 2.7 features. 
+2. In order to supply arguments to calls like [askProgram](https://ghidra.re/ghidra_docs/api/ghidra/app/script/GhidraScript.html#askProgram(java.lang.String)) (which sets the current program being analyzed), a properties file needs to be provided with the same name and location as the script being run. In this case [sample.properties](sample.properties) and [sample.py](sample.py).
 
