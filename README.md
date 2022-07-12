@@ -1,14 +1,19 @@
 # ghidra-python-skeleton
 
-A simple template repo to provide a VScode Ghidra python scripting environment.
+A simple template to provide a vscode Ghidra python scripting environment.
 
+## Features
+
+- Prescribes workflow to get you started (easily modified)
+- Auto complete for Ghidra Python script
+    - via pyi typings from [VDOO-Connected-Trust/ghidra-pyi-generator](https://github.com/VDOO-Connected-Trust/ghidra-pyi-generator)
 
 ## Workflow
 
 Ghidra is a binary analysis tool (and much more). In order to do something useful, you need to create a project and add binaries. Once a project exists with at least one binary added, headless analysis can begin. 
 
-1. [Create Ghidra Project](.vscode/tasks.json)
-2. [Import binary to project](.vscode/tasks.json)
+1. [Create Ghidra Project](.vscode/tasks.json#L25-L35)
+2. [Import binary to project](.vscode/tasks.json#L37-L49)
 3. [Run script on binary](run_headless.py)
    - Sample Script - [sample.py](sample.py)
 
@@ -33,9 +38,9 @@ https://ghidra-sre.org/
    - Need to download the [latest Ghidra](https://github.com/NationalSecurityAgency/ghidra/releases/latest) and it's [dependencies](https://ghidra-sre.org/InstallationGuide.html#Requirements)
    - Once downloaded, update [settings.json](.vscode/settings.json) with path to Ghidra install path (the directory path to the unzipped release)
 :
-```json
-    "GHIDRA_INSTALL_DIR": "<replace me with correct path> ",
-```
+
+Update setttings with install path:
+https://github.com/clearbluejar/ghidra-python-vscode-skeleton/blob/0a081798d16e4a498c3f8a25a9b60863f421581e/.vscode/settings.json#L12-L18
 
 ### Install Ghidra Python stubs (auto-complete powers)
 
@@ -186,7 +191,8 @@ Terminal will be reused by tasks, press any key to close it.
 ## Ways to run headless script
 
 1. The most straightforward means to run the script it to hit run via launch on [run_headless.py](run_headless.py). It simply uses subprocess module with the correct arguments to run the sample script. 
-2. Another way is to run the script directly by using the `Run Current Python Script in Ghidra Jython` task within[tasks.json](.vscode/tasks.json).  To use this task make sure you have open and focused the [sample.py](sample.py).
+2. Another way is to run the script directly by using the `Run Current Python Script in Ghidra Jython` task within [tasks.json](.vscode/tasks.json).  To use this task make sure you have open and focused the [sample.py](sample.py).
+3. The third way would be to simply copy sample.py to your `ghidra_scripts` directory and run it in the GUI using Script Manager
 
 
 ## Ghidra Headless Scripting Hangups 
