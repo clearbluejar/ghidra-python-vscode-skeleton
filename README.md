@@ -49,8 +49,7 @@ https://github.com/clearbluejar/ghidra-pyi-generator
 - Relies on [settings.json](.vscode/settings.json) being configured correctly (already configured in template)
 
 ```
-wget https://github.com/clearbluejar/ghidra-pyi-generator/releases/download/v1.0.3-10.1.4/ghidra_stubs-10.1.4.refs_heads_master-py2.py3-none-any.whl
-pip install ghidra_stubs-10.1.4.refs_heads_master-py2.py3-none-any.whl
+pip install https://github.com/clearbluejar/ghidra-pyi-generator/releases/download/v1.0.3-10.1.4/ghidra_stubs-10.1.4.refs_heads_master-py2.py3-none-any.whl
 ```
 
 After installation, ensure the following settings are correct in [settings.json](.vscode/settings.json):
